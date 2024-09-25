@@ -1,16 +1,9 @@
 const eventContainer=document.querySelector('div.event-container')
 let data=[]
 
-
 async function LoadData() {
     try {
-        let url=new URL("http://localhost:5000/webhook/events")
-        if(data.length!==0)
-        {
-            let start_timestamp=data[data.length-1]["timestamp"]
-            console.log("hit",start_timestamp);
-            url.searchParams.set('start_timestamp',start_timestamp)
-        }
+        let url=new URL(`${window.location.origin}/webhook/events`)
         let res=await fetch(url)
         res=await res.json()
         console.log("Res length",res.length)
@@ -27,7 +20,6 @@ window.addEventListener('DOMContentLoaded',e=>{
     },15*1000)
 
 })
-
 
 function formateMessage(event)
 {

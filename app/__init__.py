@@ -7,10 +7,11 @@ from app.extensions import mongo
 import os 
 from flask_cors import CORS
 # Creating our flask app
+load_dotenv()
 def create_app():
     app = Flask(__name__)
     CORS(app)
-    app.config["MONGO_URI"] = os.getenv("MONGO_URI", "mongodb://localhost:27017/github")
+    app.config["MONGO_URI"] = os.getenv("MONGO_URI")
     mongo.init_app(app)
     # registering all the blueprints
     app.register_blueprint(webhook)

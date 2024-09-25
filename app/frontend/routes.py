@@ -1,6 +1,6 @@
 from flask import Blueprint,request,jsonify,render_template
 
-frontend = Blueprint('Frontend', __name__, url_prefix='/',template_folder='./templates',static_folder="./statics")
+frontend = Blueprint('Frontend', __name__, url_prefix='/',template_folder='./templates')
 
 
 
