@@ -53,5 +53,5 @@ docker-compose up
 
 * Also make sure to remote port forwarding using ngrok using command 
 `ngrok http localhost:5000`
-* And add the public url provide by ngrok to webhook with specified webhook path
+* And add the public url provide by ngrok to webhook with specified webhook path and select webhook reponse type to application/json
 `${PUBLIC_URL}/webhook/receiver`
