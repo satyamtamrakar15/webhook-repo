@@ -45,14 +45,22 @@ http://localhost:5000/
 
 
 
-
-* Using docker-compose.yml 
+### Using docker-compose.yml 
 
 * To start the application it will spin mongodb container and run the main flask app
-* I'm using WSL in windows so for me it docker-compose command tool is docker-compose else use `docker compose up` for Docker Desktop
-docker-compose up
-
+* If you are using Docker-Desktop use below command
+```bash
+    docker compose up
+```
+* Else if you are using WSL on windows use below command
+```bash
+    docker-compose up
+```
 * Also make sure to remote port forwarding using ngrok using command 
-`ngrok http localhost:5000`
-* And add the public url provide by ngrok to webhook with specified webhook path and select webhook reponse type to application/json
-`${PUBLIC_URL}/webhook/receiver`
+```bash
+    ngrok http localhost:5000
+```
+* And add the public url provide by ngrok to webhook with specified webhook path
+```bash
+    `${PUBLIC_URL}/webhook/receiver`
+```
