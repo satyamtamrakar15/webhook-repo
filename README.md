@@ -45,7 +45,8 @@ http://localhost:5000/
 
 
 
-<!-- Using docker-compose.yml  -->
+
+* Using docker-compose.yml 
 
 * To start the application it will spin mongodb container and run the main flask app
 * I'm using WSL in windows so for me it docker-compose command tool is docker-compose else use `docker compose up` for Docker Desktop
